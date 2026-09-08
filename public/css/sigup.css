@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------navbar end------------------------------------------ */
+body {
+  background-image: url("../images/ai.png");
+  background-repeat:  no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+
+}
+.continer {
+  /* background: radial-gradient(rgb(120, 45, 11), rgb(108, 88, 82) ); */
+    display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content:center;
+  width: 100%;
+  height: 100vh;
+} 
+.continer .back-button{
+    background-color: black;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.continer .back-button a{
+    text-decoration: none;
+}
+
+.singin-page {
+  position: relative;
+  right: 123px;
+  backdrop-filter: blur(40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid rgb(247, 247, 247);
+  border-radius: 12px;
+  width: 35%;
+  row-gap: 2rem;
+  padding: 2rem 3rem;
+  background: blur(12px 123px white);
+}
+
+.singin-page h1 {
+  text-align: center;
+  width: 100%;
+  color: azure;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.singin-page .input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.singin-page .input-box input {
+  border: none;
+  color: aliceblue;
+  font-size: larger;
+  width: 100%;
+  background-color: transparent;
+  padding: 0.5rem 0.5rem;
+}
+
+.singin-page .input-box input::placeholder {
+  color: aliceblue;
+  border: none;
+}
+
+.singin-page .remember-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: aliceblue;
+  margin: none;
+}
+
+.singin-page .remember-box a {
+  color: white;
+  text-decoration: none;
+}
+
+.singin-page .login-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.singin-page .login-box button {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.7rem 0;
+  border-radius: 1.5rem;
+  border: none;
+  font-weight: 700;
+}
+
+.singin-page .account-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+
+.singin-page .account-box a {
+  color: rgb(97, 249, 163);
+}

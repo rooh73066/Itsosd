@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+  color: rgb(2, 2, 2);
+  background-color: aliceblue;
+  padding: 0.5rem 4rem;
+}
+.navbar-continer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: blueviolet; */
+}
+.navbar-continer .main-logo .main-logo .navbarLogoImage {
+  height: 4.5rem;
+}
+.navbar-continer .main-logo .main-logo {
+  text-decoration: none;
+}
+
+.navbar-continer .nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item, .nav-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black ;
+  height: 2rem;
+  width: 6rem;
+}
+.nav-item .nav-item-link:hover {
+  background-color: black;
+  color: aliceblue;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.navbar-continer .login-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.navbar-continer .login-link .join .nav-item-link {
+  background-color: black;
+  color: aliceblue;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* ---------------------------------footer style ------------------------------------------ */
+
+.footer-continer{
+  background-color: rgb(49, 3, 3);
+  padding: 4rem 6rem;
+  margin-top: 2rem;
+}
+.footer-content{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+.content-info{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: aliceblue;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-logo-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  color: azure;
+}
+.footer-logo-section .footerLogo{
+  padding: 0.5rem;
+ /* border: 2px yellowgreen solid;
+ border-radius: 12px; */
+  overflow: hidden;
+}
+.footer-blow-logo{
+    display: flex;
+    flex-direction: column;
+}
+.footer-blow-logo h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+.footer-blow-logo p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+.footer-logo-section .footerLogo img{
+  height: 3rem;
+  object-fit: cover;
+}
+.footer-social-icon{
+ 
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.footer-social-icon .footer-icon-item{
+   padding: 0.5rem;
+    /* border: 2px greenyellow solid;
+    border-radius: 8px; */
+}
+.footer-icon-item a img{
+    height: 2rem;
+}
+
+
+.content-list .item-list .item  , .item-link {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  list-style: none;
+  color: aliceblue;
+  line-height: 1.5;
+}
+.content-list .item-list .item-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.content-list{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+}
+/* ----------------------------------------------------------------- */
+.footer-last-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+.footer-last-info .last-info-list .item-list{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.footer-last-info .last-info-list .item-list .item , .item-link {
+    list-style: none;
+    color: aliceblue;
+    text-decoration: none;
+}
+.footer-last-info  .last-info-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.footer-last-info .last-info-button .lib{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    background-color: white;
+    height: 2rem;
+    padding: 0 0.2rem;
+    border-radius: 3px;
+}
+.footer-last-info .last-info-button .lib .liba{
+    color: black;
+    text-decoration: none;
+    
+}

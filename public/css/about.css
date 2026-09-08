@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+/*---------------------------------hero section styling start---------------------------------*/
+
+.hero-continer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-continer .hero-content {
+  background-color: rgb(23, 70, 23);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 96%;
+  gap: 0.5rem;
+  padding: 2rem 4rem;
+  color: white;
+  border-radius: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hero-content .hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 40%;
+  /* background-color: blue; */
+  overflow: hidden;
+}
+.hero-content .hero-image img {
+  /* border: 1px white solid;
+  border-radius: 2rem; */
+  backdrop-filter: blur(50%);
+  object-fit: cover;
+  height: 100%;
+}
+.hero-content .info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.hero-content .info .hero-contentTitle {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.hero-content .info ul .heroList {
+  padding: 0.2rem 0;
+  list-style: none;
+}
+
+.hero-content .info .hero-btn > .hero-btnLink {
+  height: 2rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: white;
+  width: 40%;
+  border-radius: 0.2rem;
+}
+
+/*---------------------------------hero section styling end---------------------------------*/
+
+/*---------------------------------Team section styling start--------------------------------------*/
+.team-continer{
+    /* background-color: bisque; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    margin: 0.5rem 0;
+}
+.team-headling{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.headling-par {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+}
+.headlingTitle{
+  text-align: center;
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+
+}
+.team-card-continer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2rem;
+}
+.team-cart .team-info p{
+    line-height: 1.5rem;
+}
+
+.team-card-continer .team-cart {
+    /* border: 2px black solid; */
+    background-color: gainsboro;
+    height: 70vh;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.team-card-continer .team-cart .image-section {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.team-cart .image-section  img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.team-cart .team-social-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    overflow: hidden;
+    height: 3rem;
+    margin: 0.5rem 0;
+}
+.team-social-icon .social-icon a{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 3rem;
+}
+.team-social-icon .social-icon a  img{
+    width: 2rem;
+    object-fit: cover;
+}
+.teaminfo{
+    padding: 0  0.5rem;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+/*---------------------------------ream section styling end------------------------------*/
