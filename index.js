@@ -38,7 +38,7 @@ app.get("/contact", (req , res)=>{
     res.render("contact");
 })
 app.get("/sigin", (req , res)=>{
-    res.render("sigin");
+    res.render("user/sigin");
 })
 app.get("/join", (req , res)=>{
     res.render("user/join");
