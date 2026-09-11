@@ -40,8 +40,8 @@ app.get("/contact", (req , res)=>{
 app.get("/sigin", (req , res)=>{
     res.render("sigin");
 })
-app.get("/sigup", (req , res)=>{
-    res.render("sigup");
+app.get("/join", (req , res)=>{
+    res.render("user/join");
 })
 
 
