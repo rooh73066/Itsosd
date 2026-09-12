@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,38 @@
     <link rel="stylesheet" href="../css/service.css">
     <link rel="stylesheet" href="../css/nav-footer.css">
 </head>
+
 <body>
     <!-- Nav-bar -->
-     <%- include("./component/navbar") %>
+    <%- include("./component/navbar") %>
 
         <!-- ===================================hero section=============================== -->
-   <div class="hero-continer">
-        <div class="hero-content">
-            <hero class="info">
-                <h1 class="hero-contentTitle">Logo Design for Saudi Businesses </h1>
-                <p class="heroList">Custom Arabic/English logos and complete brand systems crafted for 
-                    growth in Riyadh, Dammam, and across KSA. Make a strong first impression everywhere—website, 
-                    storefront, packaging, and social media.
-                </p>
-                <div class="hero-btn">
-                    <a href="/contact" class="hero-btnLink">Contact Us</a>
+        <div class="hero-continer">
+            <div class="hero-content">
+                <hero class="info">
+                    <h1 class="hero-contentTitle">Logo Design for Saudi Businesses </h1>
+                    <p class="heroList">Custom Arabic/English logos and complete brand systems crafted for
+                        growth in Riyadh, Dammam, and across KSA. Make a strong first impression everywhere—website,
+                        storefront, packaging, and social media.
+                    </p>
+                    <div class="hero-btn">
+                        <a href="/contact" class="hero-btnLink">Contact Us</a>
+                    </div>
+                    <p class="money-box">Keywords: logo design Riyadh · logo design Dammam · Arabic logo designer KSA
+                    </p>
+                </hero>
+                <div class="hero-image">
+                    <img src="../images/service.png" alt="">
                 </div>
-                <p class="money-box">Keywords: logo design Riyadh · logo design Dammam · Arabic logo designer KSA</p>
-            </hero>
-            <div class="hero-image">
-                <img src="../images/service.png" alt="">
             </div>
         </div>
-    </div>
 
-    <!--=========== Footer section=============== -->
-    <%- include("component/footer") %>
+        <!--=========== Footer section=============== -->
+        <%- include("component/footer") %>
+            <script>
+                const Selectyear = document.querySelector(".year");
+                Selectyear.textContent = new Date().getFullYear();
+            </script>
 </body>
+
 </html>

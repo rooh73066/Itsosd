@@ -5,6 +5,7 @@
 }
 body{
   background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
 }
 /* ---------------------------------navbar end------------------------------------------ */
 
@@ -245,7 +246,78 @@ body{
   color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* ===============================what we do service sytleing end =====================================*/
+
+/* ===============================why we choose itsosd section start======================================= */
+
+.choose-continer{
+  border-radius: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choose-continer .choose-section{
+    background-color: black;
+  border-radius: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 3rem;
+  text-align: center;
+  padding: 2rem 0;
+
+}
+.choose-section .choose-title .h5{
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  color: white;
+  margin: 0.5rem 0;
+}
+.choose-section .choose-title .h4{
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  color: white;
+}
+.choose-section .card-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+  gap: 0.5rem;
+}
+.choose-section .card-box .card{
+  border: 2px solid white;
+  width: 18%;
+  border-radius: 6px;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+.card .cardimage .img{
+  height: 3rem;
+}
+.card .choose-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+.card .choose-info .h5{
+  font-size: 1.2rem;
+}
+
+/* ==============================why we choose  section end======================================= */
+/* ===============================what we do word section sytleing start=====================================*/
 .work-process-continer{
   background-color:aliceblue;
   padding: 2rem 0;
@@ -338,5 +410,89 @@ body{
   font-size: 1.5rem;
   padding: 1rem 0;
 }
+/* ===============================testionmail  section start======================================= */
+.testmonail-continer{
+  padding: 2.5rem 0;
+}
+.testmonail-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.testmonail-section .test-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.test-title .h5{
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.test-title .h4{
+  font-size: 2rem;
+}
+.test-cardSection{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
 
+}
+.test-cardSection .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: flex-start;
+  width: 30%;
+  border: 2px solid gray;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.card .cartSection p{
+  font-size: 4rem;
+  font-weight: 700;
+}
+.card .pargraph{
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.card .user-section{
+  display: flex;
+  gap: 1rem;
+}
+.card .user-section .image{
+  height: 3rem;
+ width:3rem;
+  overflow: hidden;
+  border: 2px solid rgb(9, 80, 27);
+  border-radius: 50%;
+}
+.card .user-section .image .img{
+ /* height: 38px; */
+ width: 100%;
+ object-fit: cover;
+ object-position: center;
+}
+.card .user-section .userInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.card .user-section .userInfo .h6{
+  font-size: 1.1rem;
+}
+
+.test-cardSection .card:hover{
+  background-color: rgb(24, 100, 24);
+  color: white;
+}
 /* ===============================footer section start======================================= */
+
+

@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/nav-footer.css">
-   
+
 </head>
+
 <body>
-    
-     <!-- ======================================nav bar section=============================== -->
-        <%- include("./component/navbar") %>
-     <!-- ===================================hero section=============================== -->
-    <div class="hero-continer">
-        <div class="hero-content">
-            <hero class="info">
-                <h1 class="hero-contentTitle">Let experts find the right freelancer for you</h1>
-                <ul type="squre">
-                    <li class="heroList">work with experts who will source, interview , and vet freelancers for you </li>
-                    <li class="heroList">Get a report with clear recommendations</li>
-                    <li class="heroList">Hire vetted freelance talant with confidence</li>
-                </ul>
-                <div class="hero-btn">
-                    <a href="#" class="hero-btnLink">Discouer expert sourcing</a>
+
+    <!-- ======================================nav bar section=============================== -->
+    <%- include("./component/navbar") %>
+        <!-- ===================================hero section=============================== -->
+        <div class="hero-continer">
+            <div class="hero-content">
+                <hero class="info">
+                    <h1 class="hero-contentTitle">Let experts find the right freelancer for you</h1>
+                    <ul type="squre">
+                        <li class="heroList">work with experts who will source, interview , and vet freelancers for you
+                        </li>
+                        <li class="heroList">Get a report with clear recommendations</li>
+                        <li class="heroList">Hire vetted freelance talant with confidence</li>
+                    </ul>
+                    <div class="hero-btn">
+                        <a href="#" class="hero-btnLink">Discouer expert sourcing</a>
+                    </div>
+                    <div class="money-box">100% money-back guarantee</div>
+                </hero>
+                <div class="hero-image">
+                    <img src="../images/grouptphoto.png" alt="">
                 </div>
-                <div class="money-box">100% money-back guarantee</div>
-            </hero>
-            <div class="hero-image" >
-                <img src="../images/grouptphoto.png" alt="">
             </div>
         </div>
-    </div>
-     <!-- =================================== section =============================== -->
+        <!-- =================================== section =============================== -->
 
-         <!-- ===================================footer section start =============================== -->
-    <%- include("./component/footer") %>
+        <!-- ===================================footer section start =============================== -->
+        <%- include("./component/footer") %>
+            <script>
+                const Selectyear = document.querySelector(".year");
+                Selectyear.textContent = new Date().getFullYear();
+            </script>
 </body>
+
 </html>

@@ -19,7 +19,8 @@
         <div class="hero-continer">
             <div class="hero-content">
                 <hero class="info">
-                    <h1 class="hero-contentTitle">We Transform Your Vision Into Powerful Digital Experiences That Inspire Growth</h1>
+                    <h1 class="hero-contentTitle">We Transform Your Vision Into Powerful Digital Experiences That
+                        Inspire Growth</h1>
                     <ul type="squre">
                         <li class="heroList">work with experts who will source, interview , and vet freelancers for you
                         </li>
@@ -117,6 +118,10 @@
 
         <!-- ===================================footer section start =============================== -->
         <%- include("./component/footer") %>
+            <script>
+                const Selectyear = document.querySelector(".year");
+                Selectyear.textContent = new Date().getFullYear();
+            </script>
 </body>
 
 </html>
