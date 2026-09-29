@@ -1,0 +1,332 @@
+/* =========================
+           ROOT VARIABLES
+        ========================== */
+
+        :root {
+            --page: #faf9f7;
+            --card: #ffffff;
+            --border: #e6e4e0;
+            --text: #141414;
+            --muted: #565656;
+            --active-bg: #ffffff;
+            --active-text: #1d5fc4;
+        }
+
+
+        /* =========================
+           GLOBAL
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            /* padding: 80px 20px;
+            background: var(--page);
+            color: var(--text); */
+
+            font-family:
+                "Inter",
+                "Helvetica Neue",
+                Arial,
+                sans-serif;
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================== */
+
+        .roadmap-container {
+            width: 100%;
+            max-width: 1370px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        .roadmap-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .roadmap-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        /* =========================
+           ROADMAP
+        ========================== */
+
+        .roadmap {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .roadmap-step-selector {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .step-nav-button {
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            background: var(--card);
+            color: var(--text);
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .step-nav-button:hover,
+        .step-nav-button[aria-pressed="true"] {
+            border-color: var(--active-bg);
+            background: var(--active-bg);
+            color: var(--active-text);
+        }
+
+        .step-nav-button:focus-visible {
+            outline: 3px solid var(--active-text);
+            outline-offset: 3px;
+        }
+
+        .step-card[hidden] {
+            display: none;
+        }
+        /* =========================
+           STEP CARD
+        ========================== */
+        
+        .step-card {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+            border-radius: 24px;
+
+            padding: 32px;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        #step-1,
+        #step-4 {
+             background: rgb(23, 70, 23);
+            color: #ffffff;
+            
+        }
+
+        #step-2,
+        #step-5 {
+           background: rgb(49, 3, 3);
+            color: #ffffff;
+        }
+
+        #step-3,
+        #step-6 {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        .step-card .step-time {
+            color: #ffffff;
+        }
+
+        .step-card:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 35px rgba(0, 0, 0, 0.07);
+        }
+
+
+        /* =========================
+           STEP HEADER
+        ========================== */
+
+        .step-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            min-width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: var(--active-bg);
+            color: var(--active-text);
+
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        #step-1 .step-number,
+        #step-4 .step-number {
+            background: #ffffff;
+            color: #991b1b
+        }
+
+        #step-2 .step-number,
+        #step-5 .step-number {
+            background: #ffffff;
+            color: #14532d;
+        }
+
+        #step-3 .step-number,
+        #step-6 .step-number {
+            background: #ffffff;
+            color: #404040;
+        }
+
+        .step-title-area {
+            flex: 1;
+        }
+
+        .step-title {
+            font-size: 1.7rem;
+            font-weight: 600;
+
+            margin-bottom: 7px;
+        }
+
+        .step-time {
+            color: var(--active-text);
+
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+
+        /* =========================
+           DESCRIPTION
+        ========================== */
+
+        .step-description {
+            max-width: 850px;
+
+            margin-bottom: 25px;
+
+            color: #ffffff;
+
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           INFORMATION SECTIONS
+        ========================== */
+
+        .info-heading {
+            margin-bottom: 12px;
+
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           RESOURCES
+        ========================== */
+
+        .resources {
+            padding-left: 22px;
+
+            color: #ffffff;
+
+            font-size: 0.98rem;
+            line-height: 1.8;
+        }
+
+        .resources li {
+            padding-left: 4px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 25px 15px;
+            }
+
+            .roadmap-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .step-card {
+                padding: 25px 22px;
+            }
+
+            .step-title {
+                font-size: 1.45rem;
+            }
+
+            .step-description {
+                font-size: 1rem;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .roadmap-header {
+                margin-bottom: 25px;
+            }
+
+            .roadmap-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .step-card {
+                padding: 22px 18px;
+                border-radius: 18px;
+            }
+
+            .step-number {
+                min-width: 40px;
+                height: 40px;
+
+                font-size: 0.95rem;
+            }
+
+            .step-title {
+                font-size: 1.25rem;
+            }
+
+            .step-time {
+                font-size: 0.85rem;
+            }
+
+            .resources {
+                font-size: 0.9rem;
+            }
+        }
