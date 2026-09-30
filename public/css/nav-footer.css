@@ -3,62 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-.navbar {
-  color: rgb(2, 2, 2);
-  background-color: aliceblue;
-  padding: 0.5rem 4rem;
-}
-.navbar-continer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  /* background-color: blueviolet; */
-}
-.navbar-continer .main-logo .main-logo .navbarLogoImage {
-  height: 4.5rem;
-}
-.navbar-continer .main-logo .main-logo {
-  text-decoration: none;
-}
-
-.navbar-continer .nav-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-item, .nav-item-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  text-decoration: none;
-  color: black ;
-  height: 2rem;
-  width: 6rem;
-}
-.nav-item .nav-item-link:hover {
-  background-color: black;
-  color: aliceblue;
-  border-radius: 4px;
-  font-weight: 700;
-}
-
-.navbar-continer .login-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-.navbar-continer .login-link .join .nav-item-link {
-  background-color: black;
-  color: aliceblue;
-  border-radius: 4px;
-  font-weight: 700;
-}
 
 /* ---------------------------------footer style ------------------------------------------ */
 

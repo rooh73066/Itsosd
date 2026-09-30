@@ -1,0 +1,257 @@
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+    color: rgb(2, 2, 2);
+    background-color: aliceblue;
+    padding: 0.5rem 4rem;
+}
+
+
+/* =========================================================
+   NAVBAR CONTAINER
+========================================================= */
+
+.navbar-continer {
+    width: 100%;
+    min-height: 4.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.main-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbarLogoImage {
+    height: 4.5rem;
+    width: auto;
+    display: block;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 6rem;
+    height: 2.5rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+
+    color: black;
+    border-radius: 4px;
+
+    transition: 0.2s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.nav-item-link:hover {
+    background-color: black;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   LOGIN / JOIN
+========================================================= */
+
+.login-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-link .join .nav-item-link {
+    background-color: black;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+.login-link .join .nav-item-link:hover {
+    background-color: #333;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 2rem;
+    cursor: pointer;
+
+    color: black;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0.5rem 2rem;
+    }
+
+    .nav-item-link {
+        width: 5rem;
+        font-size: 0.95rem;
+    }
+
+    .login-link {
+        gap: 0.5rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0.5rem 1.5rem;
+    }
+
+    .navbar-continer {
+        position: relative;
+    }
+
+    /* Logo */
+
+    .navbarLogoImage {
+        height: 3.5rem;
+    }
+
+    /* Hide desktop navigation */
+
+    .nav-link,
+    .login-link {
+        display: none;
+    }
+
+    /* Show menu button */
+
+    .menu-btn {
+        display: block;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbarLogoImage {
+        height: 3rem;
+    }
+
+    .menu-btn {
+        font-size: 1.7rem;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .nav-link.active,
+    .login-link.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .navbar-continer {
+        flex-wrap: wrap;
+    }
+
+    .nav-link.active {
+        margin-top: 1rem;
+    }
+
+    .login-link.active {
+        margin-top: 0.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .nav-link.active .nav-item-link,
+    .login-link.active .nav-item-link {
+        width: 100%;
+    }
+}
