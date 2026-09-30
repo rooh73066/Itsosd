@@ -404,11 +404,27 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
-.workcard-coninter .card .link .alink{
+.workcard-coninter .card .expand-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+.workcard-coninter .card .link .toggle-btn {
+  border: none;
+  background: transparent;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   padding: 1rem 0;
+  cursor: pointer;
+  color: rgb(51, 8, 238);
+}
+.workcard-coninter .card .link .toggle-btn:hover {
+  text-decoration: underline;
+}
+.workcard-coninter .card .expand-text[hidden] {
+  display: none;
 }
 /* ===============================testionmail  section start======================================= */
 .testmonail-continer{
@@ -493,6 +509,152 @@ body{
   background-color: rgb(24, 100, 24);
   color: white;
 }
+
+/* ===============================responsive design======================================= */
+
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero-continer {
+    padding: 0 1rem;
+  }
+
+  .hero-continer .hero-content {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-content .info,
+  .hero-content .hero-image {
+    width: 100%;
+  }
+
+  .hero-content .hero-image {
+    height: 22rem;
+  }
+
+  .hero-content .info .hero-contentTitle {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+  }
+
+  .performance-continer {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .performance-continer .boxOne {
+    width: calc(33.33% - 0.7rem);
+    min-width: 180px;
+  }
+
+  .about-continer .about-section {
+    gap: 2rem;
+  }
+
+  .about-section .about-image-section,
+  .about-section .about-info-section {
+    width: 100%;
+  }
+
+  .main-card-section,
+  .choose-section .card-box,
+  .test-cardSection {
+    flex-wrap: wrap;
+  }
+
+  .main-card,
+  .workcard-coninter .card,
+  .test-cardSection .card {
+    width: calc(50% - 0.5rem);
+    min-width: 220px;
+  }
+
+  .choose-section .card-box .card {
+    width: calc(50% - 0.5rem);
+    min-width: 180px;
+  }
+
+  .work-process-section .work-info {
+    width: min(90%, 700px);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-continer .about-section {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+
+  .about-info-section .abouttitle .title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  .about-info-section .about-subtitle .subtitle {
+    font-size: 1rem;
+  }
+
+  .about-info-section .about-btn .button {
+    font-size: 1.1rem;
+  }
+
+  .choose-continer .choose-section {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .choose-section .card-box .card,
+  .workcard-coninter .card,
+  .main-card,
+  .test-cardSection .card {
+    width: 100%;
+  }
+
+  .workcard-coninter .card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-continer {
+    padding: 0 0.75rem;
+  }
+
+  .hero-content .info .hero-btn > .hero-btnLink {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .performance-continer {
+    margin: 0.5rem 1rem;
+  }
+
+  .performance-continer .boxOne {
+    width: 100%;
+    min-width: auto;
+    height: auto;
+  }
+
+  .card-section-title .h3,
+  .work-info .h6,
+  .test-title .h4 {
+    font-size: 1.8rem;
+  }
+
+  .work-process-section .work-info {
+    width: 90%;
+  }
+
+  .work-info .p {
+    font-size: 0.98rem;
+  }
+
+  .test-cardSection .card {
+    padding: 1rem;
+  }
+}
+
 /* ===============================footer section start======================================= */
 
 

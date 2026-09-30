@@ -239,7 +239,8 @@
                         <div class="icon-sec"><img src="../images/icons/checkBox.png" alt="icon" class="img"></div>
                         <h4 class="title">1.Analysis</h4>
                         <p class="subtitle">We understand your business, goals, audience, and requirements.</p>
-                        <div class="link"><a href="" class="alink">More</a></div>
+                        <p class="expand-text" hidden>We review your objectives, market position, and audience needs to create a foundation for a smarter, more effective digital solution.</p>
+                        <div class="link"><button type="button" class="toggle-btn alink" aria-expanded="false">More</button></div>
                     </div>
 
                     <!--------------card one ------------>
@@ -247,7 +248,8 @@
                         <div class="icon-sec"><img src="../images/icons/checkBox.png" alt="icon" class="img"></div>
                         <h4 class="title">2.Plan</h4>
                         <p class="subtitle">We create a clear project strategy, structure, and development plan.</p>
-                        <div class="link"><a href="" class="alink">More</a></div>
+                        <p class="expand-text" hidden>We map the scope, timeline, and technical direction so every phase is organized and your project stays aligned with your goals.</p>
+                        <div class="link"><button type="button" class="toggle-btn alink" aria-expanded="false">More</button></div>
                     </div>
 
                     <!--------------card one ------------>
@@ -255,9 +257,9 @@
                         <div class="icon-sec"><img src="../images/icons/checkBox.png" alt="card image" class="img">
                         </div>
                         <h4 class="title">3.Design</h4>
-                        <p class="subtitle">We design the interface and visual experience for your website or
-                            application</p>
-                        <div class="link"><a href="" class="alink">More</a></div>
+                        <p class="subtitle">We design the interface and visual experience for your website or application</p>
+                        <p class="expand-text" hidden>We refine the look, feel, and flow of the experience to make sure your brand is clear, your content reads better, and users enjoy interacting with it.</p>
+                        <div class="link"><button type="button" class="toggle-btn alink" aria-expanded="false">More</button></div>
                     </div>
 
                     <!--------------card one ------------>
@@ -265,9 +267,9 @@
                         <div class="icon-sec"><img src="../images/icons/checkBox.png" alt="card image" class="img">
                         </div>
                         <h4 class="title">4.Develop</h4>
-                        <p class="subtitle">Our developers turn the approved design into a functional digital product.
-                        </p>
-                        <div class="link"><a href="" class="alink">More</a></div>
+                        <p class="subtitle">Our developers turn the approved design into a functional digital product.</p>
+                        <p class="expand-text" hidden>We build the front-end and back-end structure, connect features, and ensure the product works smoothly across different devices and user flows.</p>
+                        <div class="link"><button type="button" class="toggle-btn alink" aria-expanded="false">More</button></div>
                     </div>
 
                     <!--------------card one ------------>
@@ -275,8 +277,9 @@
                         <div class="icon-sec"><img src="../images/icons/checkBox.png" alt="card image" class="img">
                         </div>
                         <h4 class="title">5. Test</h4>
-                        <p class="subtitle">We test performance, responsivesness, functionality, and compatibility.</p>
-                        <div class="link"><a href="" class="alink">More</a></div>
+                        <p class="subtitle">We test performance, responsiveness, functionality, and compatibility.</p>
+                        <p class="expand-text" hidden>We validate the experience across browsers, screen sizes, and key interactions so the final result feels reliable and polished before launch.</p>
+                        <div class="link"><button type="button" class="toggle-btn alink" aria-expanded="false">More</button></div>
                     </div>
 
                     <!--------------card one ------------>
@@ -284,9 +287,9 @@
                         <div class="icon-sec"><img src="../images/icons/checkBox.png" alt="card image" class="img">
                         </div>
                         <h4 class="title">6. Launch</h4>
-                        <p class="subtitle">After final approval, we launch your project and provide ongoing support.
-                        </p>
-                        <div class="link"><a href="" class="alink">More</a></div>
+                        <p class="subtitle">After final approval, we launch your project and provide ongoing support.</p>
+                        <p class="expand-text" hidden>We handle the final review, deployment, and post-launch support so your project can go live confidently and remain ready for future updates.</p>
+                        <div class="link"><button type="button" class="toggle-btn alink" aria-expanded="false">More</button></div>
                     </div>
 
                 </div>
@@ -370,6 +373,19 @@
 
  <!-- ===================================script section =============================== -->
         <script src="../js//commoneFuncation/year.js"></script>
+        <script>
+            document.querySelectorAll('.toggle-btn').forEach((button) => {
+                button.addEventListener('click', () => {
+                    const card = button.closest('.card');
+                    const extraText = card.querySelector('.expand-text');
+                    const isHidden = extraText.hasAttribute('hidden');
+
+                    extraText.hidden = !isHidden;
+                    button.setAttribute('aria-expanded', String(isHidden));
+                    button.textContent = isHidden ? 'Less' : 'More';
+                });
+            });
+        </script>
         
        
 </body>
