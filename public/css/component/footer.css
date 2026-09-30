@@ -1,0 +1,612 @@
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
+.footer-continer {
+    width: calc(100% - 6rem);
+    margin: 2rem 3rem 0.1rem 3rem;
+    padding: 4rem 5rem;
+
+    background-color: rgb(49, 3, 3);
+    border-radius: 8px;
+
+    color: aliceblue;
+}
+
+
+/* =========================================================
+   FOOTER CONTENT
+========================================================= */
+
+.footer-content {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        1fr
+        1.2fr;
+
+    gap: 3rem;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   COMPANY INFORMATION
+========================================================= */
+
+.content-info {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 1.5rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   FOOTER LOGO
+========================================================= */
+
+.footer-logo-section {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    color: azure;
+}
+
+
+.footer-logo-section .footerLogo {
+    padding: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.footer-logo-section .footerLogo img {
+    width: 3rem;
+    height: 3rem;
+
+    object-fit: cover;
+}
+
+
+.footer-blow-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+
+.footer-blow-logo h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+
+.footer-blow-logo p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   FOOTER DESCRIPTION
+========================================================= */
+
+.footer-par {
+    max-width: 400px;
+}
+
+
+.footer-par p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.6;
+
+    color: aliceblue;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.footer-social-icon {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+}
+
+
+.footer-icon-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.5rem;
+
+    transition: 0.2s ease;
+}
+
+
+.footer-icon-item:hover {
+    transform: translateY(-3px);
+}
+
+
+.footer-icon-item a {
+    display: flex;
+}
+
+
+.footer-icon-item a img {
+    width: 2rem;
+    height: 2rem;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   FOOTER LIST
+========================================================= */
+
+.content-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.item-list {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+
+.content-list .item {
+    list-style: none;
+
+    margin-bottom: 0.6rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.5;
+}
+
+
+.content-list .item-title {
+    margin-bottom: 1rem;
+
+    font-size: 1.3rem;
+
+    font-weight: 700;
+
+    color: white;
+}
+
+
+.item-link {
+    color: aliceblue;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.item-link:hover {
+    color: white;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   HORIZONTAL LINE
+========================================================= */
+
+.footer-continer hr {
+    margin: 2.5rem 0 1.5rem;
+
+    border: 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+   FOOTER LAST INFORMATION
+========================================================= */
+
+.footer-last-info {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    color: aliceblue;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   PRIVACY / TERMS LIST
+========================================================= */
+
+.last-info-list .item-list {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+
+.last-info-list .item {
+    list-style: none;
+}
+
+
+.last-info-list .item-link {
+    color: aliceblue;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SIGN / JOIN BUTTONS
+========================================================= */
+
+.last-info-button {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.5rem;
+}
+
+
+.last-info-button .lib {
+    min-width: 4rem;
+    height: 2rem;
+
+    padding: 0 0.5rem;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+
+    border-radius: 3px;
+
+    transition: 0.2s ease;
+}
+
+
+.last-info-button .lib:hover {
+    background-color: #ddd;
+}
+
+
+.last-info-button .liba {
+    color: black;
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .footer-continer {
+        width: calc(100% - 4rem);
+
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+        padding: 3rem;
+    }
+
+
+    .footer-content {
+        grid-template-columns:
+            1.5fr
+            1fr
+            1fr
+            1fr;
+
+        gap: 2.5rem;
+    }
+
+
+    .content-info {
+        grid-column: span 4;
+    }
+
+
+    .footer-par {
+        max-width: 600px;
+    }
+
+
+    .footer-last-info {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .footer-continer {
+        width: calc(100% - 2rem);
+
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+        padding: 2.5rem 2rem;
+    }
+
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 2.5rem 2rem;
+    }
+
+
+    .content-info {
+        grid-column: span 2;
+    }
+
+
+    .footer-last-info {
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 1.5rem;
+    }
+
+
+    .last-info-list .item-list {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .footer-continer {
+        width: calc(100% - 1.5rem);
+
+        margin: 1rem 0.75rem;
+
+        padding: 2.5rem 1.5rem;
+
+        border-radius: 6px;
+    }
+
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+    }
+
+
+    .content-info {
+        grid-column: span 1;
+
+        gap: 1.2rem;
+    }
+
+
+    .footer-logo-section {
+        gap: 0.8rem;
+    }
+
+
+    .footer-logo-section .footerLogo img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+
+    .footer-blow-logo h4 {
+        font-size: 1.3rem;
+    }
+
+
+    .footer-blow-logo p {
+        font-size: 0.9rem;
+    }
+
+
+    .footer-par {
+        max-width: 100%;
+    }
+
+
+    .footer-par p {
+        font-size: 0.95rem;
+
+        line-height: 1.6;
+    }
+
+
+    .footer-social-icon {
+        gap: 0.3rem;
+    }
+
+
+    .footer-icon-item {
+        padding: 0.4rem;
+    }
+
+
+    .footer-icon-item a img {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+
+    .content-list .item-title {
+        font-size: 1.2rem;
+
+        margin-bottom: 0.8rem;
+    }
+
+
+    .content-list .item {
+        font-size: 0.95rem;
+
+        margin-bottom: 0.5rem;
+    }
+
+
+    .footer-continer hr {
+        margin: 2rem 0 1.5rem;
+    }
+
+
+    .footer-last-info {
+        gap: 1.2rem;
+
+        font-size: 0.85rem;
+    }
+
+
+    .last-info-list {
+        width: 100%;
+    }
+
+
+    .last-info-list .item-list {
+        justify-content: center;
+
+        gap: 0.7rem 1rem;
+    }
+
+
+    .last-info-list .item-link {
+        white-space: normal;
+    }
+
+
+    .last-info-button {
+        width: 100%;
+    }
+
+
+    .last-info-button .lib {
+        width: 5rem;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .footer-continer {
+        padding: 2rem 1rem;
+    }
+
+
+    .footer-logo-section {
+        align-items: flex-start;
+    }
+
+
+    .footer-social-icon {
+        margin-top: 0.3rem;
+    }
+
+
+    .last-info-list .item-list {
+        flex-direction: column;
+
+        gap: 0.6rem;
+    }
+
+
+    .footer-last-info {
+        font-size: 0.8rem;
+    }
+
+}
