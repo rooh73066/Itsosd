@@ -37,6 +37,208 @@
         </div>
         <!-- =================================== section =============================== -->
 
+        <!-- =============================== CONTACT SECTION =============================== -->
+
+<section class="agency-contact">
+    <div class="contact-wrapper">
+
+        <!-- Left Side -->
+        <div class="contact-intro">
+            <span class="contact-badge">LET'S WORK TOGETHER</span>
+
+            <h2>
+                Have an Idea?
+                <span>Let's Turn It Into Reality.</span>
+            </h2>
+
+            <p class="contact-description">
+                Whether you need a modern website, creative graphics, a complete
+                brand identity, or a custom digital solution, our team is ready
+                to transform your ideas into meaningful digital experiences.
+            </p>
+
+            <div class="contact-services">
+
+                <div class="contact-service">
+                    <div class="service-number">01</div>
+                    <div>
+                        <h4>Web Development</h4>
+                        <p>Modern, responsive and scalable websites.</p>
+                    </div>
+                </div>
+
+                <div class="contact-service">
+                    <div class="service-number">02</div>
+                    <div>
+                        <h4>Graphic Design</h4>
+                        <p>Creative visuals that strengthen your brand.</p>
+                    </div>
+                </div>
+
+                <div class="contact-service">
+                    <div class="service-number">03</div>
+                    <div>
+                        <h4>UI/UX Design</h4>
+                        <p>Simple and engaging experiences for your users.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Right Side Contact Form -->
+        <div class="contact-form-box">
+
+            <div class="form-heading">
+                <h3>Start Your Project</h3>
+                <p>
+                    Tell us a little about your project and we'll get back to you.
+                </p>
+            </div>
+
+            <form action="/contact" method="POST" class="agency-contact-form">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+92 XXX XXXXXXX"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+
+                        <select id="service" name="service" required>
+
+                            <option value="" disabled selected>
+                                Select a service
+                            </option>
+
+                            <option value="web-development">
+                                Web Development
+                            </option>
+
+                            <option value="graphic-design">
+                                Graphic Design
+                            </option>
+
+                            <option value="ui-ux-design">
+                                UI/UX Design
+                            </option>
+
+                            <option value="branding">
+                                Branding & Identity
+                            </option>
+
+                            <option value="custom-solution">
+                                Custom Digital Solution
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="budget">Project Budget</label>
+
+                    <select id="budget" name="budget">
+
+                        <option value="" disabled selected>
+                            Select your estimated budget
+                        </option>
+
+                        <option value="small">
+                            Small Project
+                        </option>
+
+                        <option value="medium">
+                            Medium Project
+                        </option>
+
+                        <option value="large">
+                            Large Project
+                        </option>
+
+                        <option value="custom">
+                            Let's Discuss
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">Tell Us About Your Project</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Describe your project, requirements, goals, or any questions..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="contact-submit">
+                    <span>Send Project Inquiry</span>
+                    <span class="submit-arrow">→</span>
+                </button>
+
+                <p class="form-note">
+                    We respect your privacy. Your information will only be used
+                    to respond to your inquiry.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+
+
         <!-- ===================================footer section start =============================== -->
         <%- include("./component/footer") %>
        
