@@ -1,0 +1,635 @@
+/* =========================================================
+GLOBAL
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+min-height: 100vh;
+
+font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+background: #050505;
+
+color: #fff;
+
+
+}
+
+/* =========================================================
+PAGE
+========================================================= */
+
+.profile-page {
+position: relative;
+
+
+min-height: 100vh;
+
+overflow: hidden;
+
+padding: 0 6%;
+
+}
+
+/* =========================================================
+BACKGROUND GLOW
+========================================================= */
+
+.glow {
+position: fixed;
+
+width: 350px;
+height: 350px;
+
+border-radius: 50%;
+
+background: greenyellow;
+
+filter: blur(150px);
+
+opacity: 0.07;
+
+pointer-events: none;
+
+}
+
+.glow-one {
+top: -150px;
+left: -100px;
+}
+
+.glow-two {
+bottom: -150px;
+right: -100px;
+}
+
+/* =========================================================
+NAVBAR
+========================================================= */
+
+.navbar {
+width: 100%;
+
+height: 90px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+}
+
+.brand {
+color: #fff;
+text-decoration: none;
+
+font-size: 1.5rem;
+
+font-weight: 800;
+
+letter-spacing: -0.5px;
+
+
+}
+
+.brand span {
+color: greenyellow;
+}
+
+.nav-actions {
+display: flex;
+
+align-items: center;
+
+gap: 1.5rem;
+
+
+}
+
+.home-link {
+color: #aaa;
+
+
+text-decoration: none;
+
+transition: 0.3s;
+
+}
+
+.home-link:hover {
+color: greenyellow;
+}
+
+.logout-btn {
+border: 1px solid rgba(255, 255, 255, 0.2);
+
+background: transparent;
+
+color: #fff;
+
+padding: 0.7rem 1.2rem;
+
+border-radius: 8px;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+}
+
+.logout-btn:hover {
+border-color: greenyellow;
+
+
+color: greenyellow;
+
+
+}
+
+/* =========================================================
+PROFILE CONTAINER
+========================================================= */
+
+.profile-container {
+max-width: 1100px;
+
+margin: auto;
+
+padding: 5rem 0;
+
+
+}
+
+/* =========================================================
+PROFILE HEADER
+========================================================= */
+
+.profile-header {
+display: flex;
+
+align-items: center;
+
+gap: 1.5rem;
+
+margin-bottom: 3rem;
+}
+
+.avatar {
+width: 90px;
+height: 90px;
+
+flex-shrink: 0;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+background: greenyellow;
+
+color: #000;
+
+font-size: 2.2rem;
+
+font-weight: 800;
+
+box-shadow:
+    0 0 40px rgba(173, 255, 47, 0.15);
+
+}
+
+.profile-label {
+color: greenyellow;
+
+font-size: 0.75rem;
+
+font-weight: 700;
+
+letter-spacing: 3px;
+
+}
+
+.profile-heading h1 {
+margin: 0.4rem 0;
+
+font-size: clamp(2rem, 5vw, 3.5rem);
+
+line-height: 1.1;
+
+}
+
+.profile-heading h1 span {
+color: greenyellow;
+}
+
+.profile-heading p {
+color: #888;
+
+line-height: 1.6;
+
+
+}
+
+/* =========================================================
+GRID
+========================================================= */
+
+.profile-grid {
+display: grid;
+
+grid-template-columns: 1fr 1fr;
+
+gap: 1.5rem;
+
+}
+
+/* =========================================================
+CARD
+========================================================= */
+
+.profile-card {
+padding: 2rem;
+
+border: 1px solid rgba(255, 255, 255, 0.09);
+
+border-radius: 18px;
+
+background:
+    linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.06),
+        rgba(255, 255, 255, 0.02)
+    );
+
+backdrop-filter: blur(10px);
+
+transition: 0.3s ease;
+
+}
+
+.profile-card:hover {
+border-color: rgba(173, 255, 47, 0.25);
+transform: translateY(-3px);
+
+
+}
+
+/* =========================================================
+CARD HEADING
+========================================================= */
+
+.card-heading {
+display: flex;
+
+align-items: center;
+
+gap: 1rem;
+
+margin-bottom: 2rem;
+
+
+}
+
+.icon-box {
+width: 45px;
+height: 45px;
+
+display: flex;
+
+justify-content: center;
+align-items: center;
+
+border-radius: 12px;
+
+background: rgba(173, 255, 47, 0.1);
+
+color: greenyellow;
+
+font-size: 1.2rem;
+
+}
+
+.card-heading h2 {
+font-size: 1.1rem;
+
+margin-bottom: 0.3rem;
+
+}
+
+.card-heading p {
+color: #777;
+font-size: 0.8rem;
+
+}
+
+/* =========================================================
+INFORMATION
+========================================================= */
+
+.information-list {
+display: flex;
+
+flex-direction: column;
+
+}
+
+.information-item {
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+gap: 1rem;
+
+padding: 1rem 0;
+
+border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+}
+
+.information-item:last-child {
+border-bottom: none;
+}
+
+.information-label {
+color: #777;
+
+font-size: 0.85rem;
+
+
+}
+
+.information-value {
+color: #eee;
+
+font-size: 0.9rem;
+
+text-align: right;
+
+word-break: break-word;
+
+}
+
+/* =========================================================
+STATUS
+========================================================= */
+
+.status-content {
+display: flex;
+
+flex-direction: column;
+
+}
+
+.status-row {
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+gap: 1rem;
+
+padding: 1rem 0;
+
+border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+color: #aaa;
+
+font-size: 0.9rem;
+
+}
+
+.status-row:last-child {
+border-bottom: none;
+}
+
+.status,
+.role {
+padding: 0.35rem 0.7rem;
+
+border-radius: 50px;
+
+font-size: 0.7rem;
+font-weight: 700;
+
+}
+
+.status.active,
+.status.verified {
+background: rgba(173, 255, 47, 0.1);
+color: greenyellow;
+}
+
+.status.pending {
+background: rgba(255, 180, 0, 0.1);
+
+color: #ffb400;
+
+}
+
+.role {
+background: rgba(255, 255, 255, 0.08);
+color: #ddd;
+
+}
+
+/* =========================================================
+WELCOME CARD
+========================================================= */
+
+.welcome-card {
+grid-column: 1 / -1;
+padding: 3rem;
+
+border-radius: 20px;
+
+background:
+    linear-gradient(
+        135deg,
+        rgba(173, 255, 47, 0.12),
+        rgba(255, 255, 255, 0.03)
+    );
+
+border: 1px solid rgba(173, 255, 47, 0.15);
+}
+
+.small-title {
+color: greenyellow;
+font-size: 0.7rem;
+
+font-weight: 700;
+
+letter-spacing: 3px;
+}
+
+.welcome-card h2 {
+margin: 0.8rem 0;
+font-size: clamp(2rem, 5vw, 3.2rem);
+
+max-width: 600px;
+
+}
+
+.welcome-card h2 span {
+color: greenyellow;
+}
+
+.welcome-card p {
+max-width: 600px;
+
+color: #999;
+
+line-height: 1.7;
+
+margin-bottom: 1.5rem;
+
+
+}
+
+.explore-btn {
+display: inline-flex;
+
+align-items: center;
+
+gap: 1rem;
+
+padding: 0.9rem 1.3rem;
+
+background: greenyellow;
+
+color: #000;
+
+border-radius: 8px;
+
+text-decoration: none;
+
+font-weight: 700;
+
+transition: 0.3s;
+
+
+}
+
+.explore-btn:hover {
+background: #fff;
+transform: translateX(4px);
+
+
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+footer {
+text-align: center;
+padding: 2rem 0;
+
+color: #555;
+
+font-size: 0.8rem;
+
+
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+.profile-page {
+    padding: 0 4%;
+}
+
+.profile-container {
+    padding: 3rem 0;
+}
+
+.profile-grid {
+    grid-template-columns: 1fr;
+}
+
+.welcome-card {
+    grid-column: auto;
+}
+
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+.navbar {
+    height: 75px;
+}
+
+.brand {
+    font-size: 1.2rem;
+}
+
+.home-link {
+    display: none;
+}
+
+.profile-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    margin-bottom: 2rem;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+
+    font-size: 1.7rem;
+}
+
+.profile-heading h1 {
+    font-size: 2rem;
+}
+
+.profile-card {
+    padding: 1.3rem;
+}
+
+.information-item,
+.status-row {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 0.4rem;
+}
+
+.information-value {
+    text-align: left;
+}
+
+.welcome-card {
+    padding: 1.5rem;
+}
+
+}

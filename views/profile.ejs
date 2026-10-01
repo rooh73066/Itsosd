@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Profile | Nuru Studio</title>
+
+<link rel="stylesheet" href="../public/css/profile.css">
+
+</head>
+
+<body>
+<main class="profile-page">
+
+    <!-- Background Decorations -->
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <a href="/" class="brand">
+            Nuru<span>Studio</span>
+        </a>
+
+        <div class="nav-actions">
+            <a href="/" class="home-link">Home</a>
+
+            <button class="logout-btn" id="logoutBtn">
+                Logout
+            </button>
+        </div>
+
+    </nav>
+
+
+    <!-- Main Profile -->
+    <section class="profile-container">
+
+        <!-- Profile Header -->
+        <div class="profile-header">
+
+            <div class="avatar" id="avatar">
+                U
+            </div>
+
+            <div class="profile-heading">
+
+                <span class="profile-label">
+                    MY ACCOUNT
+                </span>
+
+                <h1>
+                    Welcome back,
+                    <span id="username">User</span>
+                </h1>
+
+                <p>
+                    Manage your account information and personal details.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Profile Content -->
+        <div class="profile-grid">
+
+
+            <!-- Personal Information -->
+            <div class="profile-card">
+
+                <div class="card-heading">
+
+                    <div class="icon-box">
+                        👤
+                    </div>
+
+                    <div>
+                        <h2>Personal Information</h2>
+                        <p>Your basic account information</p>
+                    </div>
+
+                </div>
+
+
+                <div class="information-list">
+
+                    <div class="information-item">
+
+                        <span class="information-label">
+                            Full Name
+                        </span>
+
+                        <span class="information-value" id="userName">
+                            Loading...
+                        </span>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <span class="information-label">
+                            Email Address
+                        </span>
+
+                        <span class="information-value" id="userEmail">
+                            Loading...
+                        </span>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <span class="information-label">
+                            Phone Number
+                        </span>
+
+                        <span class="information-value" id="userPhone">
+                            Loading...
+                        </span>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <span class="information-label">
+                            Address
+                        </span>
+
+                        <span class="information-value" id="userAddress">
+                            Loading...
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Account Status -->
+            <div class="profile-card status-card">
+
+                <div class="card-heading">
+
+                    <div class="icon-box">
+                        ✓
+                    </div>
+
+                    <div>
+                        <h2>Account Status</h2>
+                        <p>Your account information</p>
+                    </div>
+
+                </div>
+
+
+                <div class="status-content">
+
+                    <div class="status-row">
+
+                        <span>
+                            Account
+                        </span>
+
+                        <span class="status active">
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="status-row">
+
+                        <span>
+                            Email Verification
+                        </span>
+
+                        <span class="status pending" id="verificationStatus">
+                            Not Verified
+                        </span>
+
+                    </div>
+
+
+                    <div class="status-row">
+
+                        <span>
+                            Account Role
+                        </span>
+
+                        <span class="role" id="userRole">
+                            User
+                        </span>
+
+                    </div>
+
+
+                    <div class="status-row">
+
+                        <span>
+                            Last Login
+                        </span>
+
+                        <span id="lastLogin">
+                            Not available
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Welcome Card -->
+            <div class="welcome-card">
+
+                <div class="welcome-content">
+
+                    <span class="small-title">
+                        NURU STUDIO
+                    </span>
+
+                    <h2>
+                        Build something
+                        <span>beautiful.</span>
+                    </h2>
+
+                    <p>
+                        Your account is ready. Explore our services,
+                        manage your profile, and start creating something
+                        meaningful.
+                    </p>
+
+                    <a href="/" class="explore-btn">
+                        Explore Studio
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Nuru Studio. All rights reserved.
+        </p>
+    </footer>
+
+</main>
+
+
+<script>
+
+    /*
+    =====================================================
+    GET USER DATA
+    =====================================================
+    */
+
+    async function loadUser() {
+
+        try {
+
+            const token = localStorage.getItem("token");
+
+            if (!token) {
+
+                window.location.href = "/sigin";
+
+                return;
+            }
+
+
+            const response = await fetch("/api/auth/me", {
+
+                method: "GET",
+
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+
+            });
+
+
+            const data = await response.json();
+
+
+            if (!response.ok) {
+
+                localStorage.removeItem("token");
+
+                window.location.href = "/sigin";
+
+                return;
+            }
+
+
+            const user = data.user;
+
+
+            // Header
+            document.getElementById("username").textContent =
+                user.username;
+
+
+            // Avatar
+            document.getElementById("avatar").textContent =
+                user.username.charAt(0).toUpperCase();
+
+
+            // Personal information
+            document.getElementById("userName").textContent =
+                user.username;
+
+            document.getElementById("userEmail").textContent =
+                user.email;
+
+            document.getElementById("userPhone").textContent =
+                user.phone || "Not provided";
+
+            document.getElementById("userAddress").textContent =
+                user.address || "Not provided";
+
+
+            // Account information
+            document.getElementById("userRole").textContent =
+                user.role || "user";
+
+
+            const verificationStatus =
+                document.getElementById("verificationStatus");
+
+
+            if (user.isVerified) {
+
+                verificationStatus.textContent = "Verified";
+
+                verificationStatus.classList.remove("pending");
+
+                verificationStatus.classList.add("verified");
+
+            }
+
+
+            // Last login
+            if (user.lastLogin) {
+
+                const loginDate =
+                    new Date(user.lastLogin);
+
+                document.getElementById("lastLogin").textContent =
+                    loginDate.toLocaleString();
+
+            }
+
+        } catch (error) {
+
+            console.error("Error loading user:", error);
+
+        }
+
+    }
+
+
+    /*
+    =====================================================
+    LOGOUT
+    =====================================================
+    */
+
+    document
+        .getElementById("logoutBtn")
+        .addEventListener("click", () => {
+
+            localStorage.removeItem("token");
+
+            window.location.href = "/sigin";
+
+        });
+
+
+    /*
+    =====================================================
+    INITIALIZE
+    =====================================================
+    */
+
+    loadUser();
+
+</script>
+
+
+</body>
+
+</html>
