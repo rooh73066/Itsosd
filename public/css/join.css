@@ -1,155 +1,555 @@
+/* =========================================================
+GLOBAL RESET
+========================================================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-body {
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-}
-.continer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* background-color: aqua; */
-  width: 100%;
-  height: 100%;
+  }
+
+html {
+scroll-behavior: smooth;
 }
 
-.sig-continer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
+body {
+width: 100%;
+min-height: 100vh;
+background: #000;
+color: #fff;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================================
+MAIN CONTAINER
+========================================================= */
+
+.container {
+width: 100%;
+min-height: 100vh;
+
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+padding: 2rem;
+
+
+}
+
+/* =========================================================
+SIGNUP CONTAINER
+========================================================= */
+
+.signup-container {
+width: 100%;
+max-width: 1500px;
+
+
+min-height: 90vh;
+
+display: flex;
+gap: 2rem;
+
+
+}
+
+/* =========================================================
+IMAGE SECTION
+========================================================= */
+
+.image-section {
+width: 50%;
+min-height: 90vh;
+
+
+background-image: url("../images/home.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+
+border-radius: 24px;
+
+display: flex;
+justify-content: center;
+align-items: flex-end;
+
+padding: 3rem;
+
+
+}
+
+/* =========================================================
+IMAGE GLASS BOX
+========================================================= */
+
+.image-box {
+width: 90%;
+min-height: 15rem;
+
+
+padding: 2rem;
+
+border: 1px solid rgba(255, 255, 255, 0.4);
+border-radius: 14px;
+
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(9px);
+-webkit-backdrop-filter: blur(9px);
+
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+
+color: #fff;
+
+
+}
+
+.image-box h2 {
+font-size: clamp(1.8rem, 3vw, 3rem);
+margin-bottom: 0.7rem;
+}
+
+.image-box p {
+font-size: 1rem;
+line-height: 1.6;
+}
+
+/* =========================================================
+FORM CONTAINER
+========================================================= */
+
+.form-container {
+width: 50%;
+min-height: 90vh;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+gap: 2rem;
+
+padding: 2rem 5rem;
+
+
+}
+
+/* =========================================================
+BACK BUTTON
+========================================================= */
+
+.logo-section {
+width: 100%;
+}
+
+.back-button {
+width: 3rem;
+height: 3rem;
+
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+background: rgb(216, 69, 6);
+
+border-radius: 50%;
+
+transition: 0.3s ease;
+
+
+}
+
+.back-button:hover {
+transform: translateX(-4px);
+opacity: 0.85;
+}
+
+.back-button img {
+width: 1.3rem;
+height: 1.3rem;
+
+
+object-fit: contain;
+
+
+}
+
+/* =========================================================
+TITLE
+========================================================= */
+
+.title-container {
+width: 100%;
+
+
+display: flex;
+flex-direction: column;
+
+gap: 1rem;
+
+
+}
+
+.signup-title {
+color: greenyellow;
+
+
+font-size: clamp(2rem, 4vw, 3rem);
+line-height: 1.2;
+
+
+}
+
+.signup-subtitle {
+color: #ddd;
+
+
+font-size: 1rem;
+line-height: 1.7;
+
+max-width: 700px;
+
+
+}
+
+/* =========================================================
+FORM
+========================================================= */
+
+.form-section {
+width: 100%;
+
+
+display: flex;
+flex-direction: column;
+
+gap: 1.3rem;
+
+
+}
+
+/* =========================================================
+INPUT GROUP
+========================================================= */
+
+.form-input {
+width: 100%;
+display: flex;
+flex-direction: column;
+
+gap: 0.5rem;
+
+}
+
+.form-input label {
+font-size: 1rem;
+font-weight: 600;
+color: #fff;
+}
+
+/* =========================================================
+INPUT
+========================================================= */
+
+.form-input input {
+width: 100%;
+padding: 1rem;
+
+border: 1px solid transparent;
+border-radius: 12px;
+
+outline: none;
+
+background: rgba(238, 236, 240, 0.15);
+color: #fff;
+
+font-size: 1rem;
+
+transition: 0.3s ease;
+
+}
+
+.form-input input::placeholder {
+color: rgb(150, 150, 150);
+}
+
+.form-input input:focus {
+border-color: greenyellow;
+background: rgba(238, 236, 240, 0.2);
+}
+
+/* =========================================================
+PASSWORD + PHONE
+========================================================= */
+
+.password-box {
+width: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1.5rem;
+
+}
+
+/* =========================================================
+PASSWORD WRAPPER
+========================================================= */
+
+.input-wrapper {
+position: relative;
+width: 100%;
+}
+
+.input-wrapper input {
+padding-right: 4rem;
+}
+
+.show-password {
+position: absolute;
+right: 0.8rem;
+top: 50%;
+transform: translateY(-50%);
+border: none;
+background: transparent;
+color: greenyellow;
+cursor: pointer;
+font-size: 0.85rem;
+font-weight: 600;
+}
+
+/* =========================================================
+ERROR MESSAGE
+========================================================= */
+
+.error-message {
+min-height: 1rem;
+color: #ff5c5c;
+font-size: 0.8rem;
+
+}
+
+/* =========================================================
+INPUT ERROR
+========================================================= */
+
+.form-input input.error {
+border-color: #ff5c5c;
+}
+
+.form-input input.success {
+border-color: greenyellow;
+}
+
+/* =========================================================
+SIGNUP BUTTON
+========================================================= */
+
+.signup-button {
+width: 100%;
+}
+
+.signup-button .button {
+width: 100%;
+padding: 1rem;
+border: 2px solid greenyellow;
+border-radius: 12px;
+background: greenyellow;
+color: #000;
+font-size: 1.1rem;
+font-weight: 700;
+cursor: pointer;
+transition: 0.3s ease;
+
+
+}
+
+.signup-button .button:hover {
+background: transparent;
+color: greenyellow;
+}
+
+.signup-button .button:active {
+transform: scale(0.98);
+}
+
+/* =========================================================
+LOGIN LINK
+========================================================= */
+
+.last-p {
+width: 100%;
+text-align: center;
+color: #aaa;
+font-size: 0.95rem;
+
+}
+
+.last-p a {
+color: #fff;
+
+font-weight: 600;
+
+text-decoration: none;
+
+transition: 0.3s ease;
+
+
+}
+
+.last-p a:hover {
+color: greenyellow;
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+
+.container {
+    padding: 1.5rem;
+}
+
+.signup-container {
+    gap: 1.5rem;
 }
 
 .image-section {
-  height: 90vh;
-  width: 50%;
-  background-image: url(../images/home.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:cover;
-  border-radius: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 3rem;
-  margin: 4rem;
+    padding: 2rem;
+}
+
+.form-container {
+    padding: 2rem 3rem;
+}
+
 
 }
-.image-box{
-    width: 90%;
-    height: 15rem;
-    background-color: transparent;
-    border: 1px solid gray;
-    backdrop-filter: blur(9px);
-    border-radius: 14px;
+
+/* =========================================================
+TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+.signup-container {
+    flex-direction: column;
+
+    max-width: 700px;
 }
-/* -------------------form continer section styling------------------------ */
-.form-continer {
-  height: 100vh;
-  width: 50%;
-  background-color: rgb(0, 0, 0);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3rem;
-  padding: 1rem 6rem;
+
+.image-section {
+    width: 100%;
+    min-height: 400px;
+
+    margin: 0;
 }
-.log-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+
+.form-container {
+    width: 100%;
+    min-height: auto;
+
+    padding: 2rem 1rem;
 }
-.box {
-  border: gold;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(216, 69, 6);
-  width: 3rem;
-  height: 3rem;
+
+
 }
-/* singup section styling */
-.title-continer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+.container {
+    padding: 1rem;
 }
-.title .signup-title {
-  font-size: 2.5rem;
-  color: greenyellow;
+
+.signup-container {
+    gap: 1rem;
 }
-.title-continer .sub-title {
-  font-size: 1.2rem;
-  color: white;
+
+.image-section {
+    min-height: 300px;
+
+    padding: 1rem;
+
+    border-radius: 18px;
 }
-.form-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.5rem;
-  color: white;
+
+.image-box {
+    width: 100%;
+    min-height: 120px;
+
+    padding: 1.2rem;
 }
-.form-section .formInput {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+
+.image-box h2 {
+    font-size: 1.5rem;
 }
-.formInput label {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
+
+.image-box p {
+    font-size: 0.9rem;
 }
-.formInput input {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
-  padding: 1rem;
-      background-color: rgba(238, 236, 240, 0.2);
-    color: rgb(130, 126, 126);
-  border: none; 
-  border-radius: 12px; 
+
+.form-container {
+    padding: 1rem 0.5rem;
+
+    gap: 1.5rem;
 }
-.formInput input::placeholder{
-    color: rgb(130, 126, 126);
+
+.signup-title {
+    font-size: 2rem;
 }
-/* ----------------------------password section------------------ */
+
+.signup-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
 .password-box {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
+    grid-template-columns: 1fr;
+
+    gap: 1.3rem;
 }
 
-/* --------------------------------------------- */
+.form-input input {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+}
+
 .signup-button .button {
-  width: 100%;
-  padding: 1rem;
-  border: 2px solid greenyellow;
-  background-color: greenyellow;
-  border-radius: 0.8rem;
-  font-size: 1.5rem;
-  font-weight: 600;
+    padding: 0.9rem;
+    font-size: 1rem;
 }
-.last-p {
-  width: 100%;
-  text-align: center;
+
 }
-.last-p p a{
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3rem;
-    color: aliceblue;
-    text-decoration: none;
+
+/* =========================================================
+VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+.container {
+    padding: 0.7rem;
+}
+
+.image-section {
+    min-height: 250px;
+}
+
+.signup-title {
+    font-size: 1.7rem;
+}
+
+.signup-subtitle {
+    font-size: 0.85rem;
+}
+
+.form-container {
+    padding: 1rem 0.2rem;
+}
+
+
 }

@@ -1,91 +1,189 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../css/join.css">
+    <title>Sign Up</title>
+<link rel="stylesheet" href="../../css/join.css">
+
 </head>
 
 <body>
-    <div class="continer">
-        <div class="sig-continer">
-            <section class="image-section">
-                <div class="image-box">
-                    
+
+<main class="container">
+
+    <div class="signup-container">
+
+        <!-- Image Section -->
+        <section class="image-section">
+            <div class="image-box">
+                <h2>Design Your Future</h2>
+                <p>
+                    Create beautiful experiences with Nuru Studio.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Form Section -->
+        <section class="form-container">
+
+            <!-- Back Button -->
+            <div class="logo-section">
+                <a href="/" class="back-button">
+                    <img src="../../images/icons/arrowBack.png" alt="Back">
+                </a>
+            </div>
+
+
+            <!-- Title -->
+            <div class="title-container">
+
+                <div class="title">
+                    <h1 class="signup-title">Sign Up Now</h1>
                 </div>
-            </section>
-            <section class="form-continer">
-                <!-- top logo section and arrow button -->
-                <div class="log-section">
-                    <div class="box""><a href="/">
-                         <img src="../../images/icons/arrowBack.png" alt="" >
-                    </a>
-                       
-                    </div>
-                    
+
+                <div class="sub-title">
+                    <p class="signup-subtitle">
+                        Welcome to Nuru Studio, a space built for architects,
+                        interior designers, and creative builders who believe
+                        in the power of design to shape better environments.
+                    </p>
                 </div>
-                <!-- sigup title and sub-title section -->
-                <div class="title-continer">
-                    <div class="title">
-                        <h3 class="signup-title">Sign Up Now</h3>
-                    </div>
-                    <div class="sub-title">
-                        <p class="signup-subtitle">Welcome to Nuru Studio. a space built for architects. interior
-                            designers, and creative builders who believe in the power of design to shape better
-                            environments.</p>
 
-                    </div>
+            </div>
+
+
+            <!-- Signup Form -->
+            <form action="#" method="post" class="form-section" id="signupForm" novalidate>
+
+                <!-- Full Name -->
+                <div class="form-input">
+                    <label for="username">Full Name</label>
+
+                    <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <small class="error-message" id="usernameError"></small>
                 </div>
-                <!-- form section -->
-                <form action="#" method="post" class="form-section">
-                    <div class="username formInput">
-                        <label for="username" >Full Name</label>
-                        <input type="text" name="username" id="username" placeholder="User name" >
-                    </div>
 
-                    
 
-                    <div class="email formInput">
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="e.g example@gmail.com">
-                    </div>
-                    <div class="password-box ">
-                        <div class="password formInput">
-                            <label for="password">Password</label>
-                            <div class="box-p ">
-                                <input type="password" name="password" id="password"
-                                    placeholder="Enter Strong Password">
-                                    <!-- <img src="./eye.png" alt="" height="14rem"> -->
-                            </div>
+                <!-- Email -->
+                <div class="form-input">
+                    <label for="email">Email Address</label>
 
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="e.g. example@gmail.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <small class="error-message" id="emailError"></small>
+                </div>
+
+
+                <!-- Password + Phone -->
+                <div class="password-box">
+
+                    <!-- Password -->
+                    <div class="form-input">
+                        <label for="password">Password</label>
+
+                        <div class="input-wrapper">
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                placeholder="Enter strong password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                id="togglePassword"
+                            >
+                                Show
+                            </button>
                         </div>
-                        <div class="password formInput">
-                            <label for="phone-n">Phone</label>
-                            <div class="box-p ">
-                                <input type="text" name="phone" id="phone-n" placeholder="Phone Number">
-                                <!-- <img src="./eye.png" alt="" height="14rem" > -->
-                            </div>
-                        </div>
-                    </div>
-                   
-                      <div class="username formInput">
-                        <label for="address" >Address</label>
-                        <input type="text" name="address" id="address" placeholder="Enter your address" >
-                    </div>
-                    
 
-                    <div class="signup-button ">
-                        <button type="submit" class="button">Sign Up</button>
+                        <small class="error-message" id="passwordError"></small>
                     </div>
-                    <div class="last-p">
-                        <p>Already a member? &nbsp;<a href="/sigin"> Log In</a></p>
+
+
+                    <!-- Phone -->
+                    <div class="form-input">
+                        <label for="phone-n">Phone</label>
+
+                        <input
+                            type="tel"
+                            name="phone"
+                            id="phone-n"
+                            placeholder="Phone Number"
+                            autocomplete="tel"
+                            required
+                        >
+
+                        <small class="error-message" id="phoneError"></small>
                     </div>
-                </form>
-            </section>
-        </div>
+
+                </div>
+
+
+                <!-- Address -->
+                <div class="form-input">
+                    <label for="address">Address</label>
+
+                    <input
+                        type="text"
+                        name="address"
+                        id="address"
+                        placeholder="Enter your address"
+                        autocomplete="street-address"
+                    >
+
+                    <small class="error-message" id="addressError"></small>
+                </div>
+
+
+                <!-- Submit Button -->
+                <div class="signup-button">
+                    <button type="submit" class="button">
+                        Sign Up
+                    </button>
+                </div>
+
+
+                <!-- Login -->
+                <div class="last-p">
+                    <p>
+                        Already a member?
+                        <a href="/sigin">Log In</a>
+                    </p>
+                </div>
+
+            </form>
+
+        </section>
+
     </div>
-</body>
 
+</main>
+
+
+<script src="../../js/join.js"></script>
+
+</body>
 </html>
