@@ -4,6 +4,8 @@ const dotenv = require('dotenv');
 const methodOverride = require('method-override');
 const session = require("express-session");
 const authRoutes = require("./routes/authRoutes");
+const servicesRouters = require("./routes/servicesRoutes");
+const adminRouters = require("./routes/adminRoutes");
 const app = express();
 
 //---------------------required file------------------------
@@ -35,6 +37,9 @@ app.use(session({
 }));
 app.use("/", authRoutes);
 app.use("/api/auth", authRoutes);
+
+app.use("/services" , servicesRouters);
+app.use ("/admin" , adminRouters);
 // EJS
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -44,9 +49,9 @@ app.set("views", path.join(__dirname, "views"));
 app.get("/", (req , res)=>{
     res.render("index");
 })
-app.get("/services", (req , res)=>{
-    res.render("services");
-})
+// app.get("/services", (req , res)=>{
+//     res.render("services");
+// })
 app.get("/service" , (req , res)=>{
     res.render("service")
 })
