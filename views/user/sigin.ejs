@@ -22,8 +22,8 @@
             <section class="form-continer">
                 <!-- top logo section and arrow button -->
                 <div class="log-section">
-                    <div class="box""><a href=" /">
-                        <img src="../../images/icons/arrowBack.png" alt="">
+                    <div class="box"><a href="/">
+                        <img src="../../images/icons/arrowBack.png" alt="Back">
                         </a>
 
                     </div>
@@ -41,23 +41,26 @@
 
                     </div>
                 </div>
+                <% if (typeof errorMessage !== "undefined") { %>
+                    <p role="alert"><%= errorMessage %></p>
+                <% } %>
                 <!-- form section -->
-                <form action="#" method="post" class="form-section">
+                <form action="/login" method="post" class="form-section">
                     <div class="email formInput">
                         <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="e.g example@gmail.com">
+                        <input type="email" name="email" id="email" placeholder="e.g example@gmail.com" autocomplete="email" required>
                     </div>
 
                     <div class="username formInput">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Password">
+                        <input type="password" name="password" id="password" placeholder="Password" autocomplete="current-password" required>
                     </div>
 
                     <div class="signup-button ">
                         <button type="submit" class="button">Sig In</button>
                     </div>
                     <div class="last-p">
-                        <p>Already a member? &nbsp;<a href="/sigup"> Sig Up</a></p>
+                        <p>Need an account? &nbsp;<a href="/signup">Sign Up</a></p>
                     </div>
                 </form>
             </section>

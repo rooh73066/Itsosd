@@ -5,7 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>My Profile | Nuru Studio</title>
 
 <link rel="stylesheet" href="../css/me.css">
@@ -30,9 +29,11 @@
         <div class="nav-actions">
             <a href="/" class="home-link">Home</a>
 
-            <button class="logout-btn" id="logoutBtn">
-                Logout
-            </button>
+            <form action="/logout" method="post">
+                <button class="logout-btn" type="submit">
+                    Logout
+                </button>
+            </form>
         </div>
 
     </nav>
@@ -277,27 +278,12 @@
     async function loadUser() {
         try {
 
-            const token = localStorage.getItem("token");
-
-            if (!token) {
-
-                window.location.href = "/sigin";
-
-                return;
-            }
             const response = await fetch("/api/auth/me", {
 
                 method: "GET",
-
-                headers: {
-                    "Authorization": `Bearer ${token}`
-                }
-
             });
             const data = await response.json();
             if (!response.ok) {
-
-                localStorage.removeItem("token");
 
                 window.location.href = "/sigin";
 
@@ -368,23 +354,6 @@
         }
 
     }
-
-
-    /*
-    =====================================================
-    LOGOUT
-    =====================================================
-    */
-
-    document
-        .getElementById("logoutBtn")
-        .addEventListener("click", () => {
-
-            localStorage.removeItem("token");
-
-            window.location.href = "/sigin";
-
-        });
 
 
     /*

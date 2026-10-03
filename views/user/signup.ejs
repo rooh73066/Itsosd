@@ -55,6 +55,9 @@
 
             </div>
 
+            <% if (typeof errorMessage !== "undefined") { %>
+                <p class="error-message" role="alert"><%= errorMessage %></p>
+            <% } %>
 
             <!-- Signup Form -->
             <form action="/signup" method="post" class="form-section" id="signupForm" novalidate>
