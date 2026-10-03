@@ -8,7 +8,7 @@
 
 <title>My Profile | Nuru Studio</title>
 
-<link rel="stylesheet" href="../public/css/profile.css">
+<link rel="stylesheet" href="../css/me.css">
 
 </head>
 
@@ -275,7 +275,6 @@
     */
 
     async function loadUser() {
-
         try {
 
             const token = localStorage.getItem("token");
@@ -286,8 +285,6 @@
 
                 return;
             }
-
-
             const response = await fetch("/api/auth/me", {
 
                 method: "GET",
@@ -297,11 +294,7 @@
                 }
 
             });
-
-
             const data = await response.json();
-
-
             if (!response.ok) {
 
                 localStorage.removeItem("token");
@@ -310,8 +303,6 @@
 
                 return;
             }
-
-
             const user = data.user;
 
 
@@ -405,7 +396,6 @@
     loadUser();
 
 </script>
-
 
 </body>
 

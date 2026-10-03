@@ -19,20 +19,13 @@ const togglePassword = document.getElementById("togglePassword");
 // =========================================================
 
 togglePassword.addEventListener("click", () => {
-
-if (password.type === "password") {
-
+  if (password.type === "password") {
     password.type = "text";
     togglePassword.textContent = "Hide";
-
-} else {
-
+  } else {
     password.type = "password";
     togglePassword.textContent = "Show";
-
-}
-
-
+  }
 });
 
 // =========================================================
@@ -40,14 +33,10 @@ if (password.type === "password") {
 // =========================================================
 
 function showError(input, errorElement, message) {
+  input.classList.add("error");
+  input.classList.remove("success");
 
-
-input.classList.add("error");
-input.classList.remove("success");
-
-errorElement.textContent = message;
-
-
+  errorElement.textContent = message;
 }
 
 // =========================================================
@@ -55,13 +44,10 @@ errorElement.textContent = message;
 // =========================================================
 
 function showSuccess(input, errorElement) {
+  input.classList.remove("error");
+  input.classList.add("success");
 
-
-input.classList.remove("error");
-input.classList.add("success");
-
-errorElement.textContent = "";
-
+  errorElement.textContent = "";
 }
 
 // =========================================================
@@ -69,37 +55,27 @@ errorElement.textContent = "";
 // =========================================================
 
 function validateUsername() {
+  const value = username.value.trim();
 
+  if (value === "") {
+    showError(username, usernameError, "Full name is required.");
 
-const value = username.value.trim();
+    return false;
+  }
 
-if (value === "") {
-
+  if (value.length < 3) {
     showError(
-        username,
-        usernameError,
-        "Full name is required."
+      username,
+      usernameError,
+      "Name must contain at least 3 characters.",
     );
 
     return false;
-}
+  }
 
-if (value.length < 3) {
+  showSuccess(username, usernameError);
 
-    showError(
-        username,
-        usernameError,
-        "Name must contain at least 3 characters."
-    );
-
-    return false;
-}
-
-showSuccess(username, usernameError);
-
-return true;
-
-
+  return true;
 }
 
 // =========================================================
@@ -107,39 +83,25 @@ return true;
 // =========================================================
 
 function validateEmail() {
+  const value = email.value.trim();
 
-const value = email.value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const emailPattern =
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-if (value === "") {
-
-    showError(
-        email,
-        emailError,
-        "Email address is required."
-    );
+  if (value === "") {
+    showError(email, emailError, "Email address is required.");
 
     return false;
-}
+  }
 
-if (!emailPattern.test(value)) {
-
-    showError(
-        email,
-        emailError,
-        "Please enter a valid email address."
-    );
+  if (!emailPattern.test(value)) {
+    showError(email, emailError, "Please enter a valid email address.");
 
     return false;
-}
+  }
 
-showSuccess(email, emailError);
+  showSuccess(email, emailError);
 
-return true;
-
-
+  return true;
 }
 
 // =========================================================
@@ -147,58 +109,43 @@ return true;
 // =========================================================
 
 function validatePassword() {
+  const value = password.value;
 
-const value = password.value;
+  if (value === "") {
+    showError(password, passwordError, "Password is required.");
 
-if (value === "") {
+    return false;
+  }
 
+  if (value.length < 8) {
     showError(
-        password,
-        passwordError,
-        "Password is required."
+      password,
+      passwordError,
+      "Password must contain at least 8 characters.",
     );
 
     return false;
-}
+  }
 
-if (value.length < 8) {
-
+  if (!/[A-Z]/.test(value)) {
     showError(
-        password,
-        passwordError,
-        "Password must contain at least 8 characters."
+      password,
+      passwordError,
+      "Password must contain an uppercase letter.",
     );
 
     return false;
-}
+  }
 
-if (!/[A-Z]/.test(value)) {
-
-    showError(
-        password,
-        passwordError,
-        "Password must contain an uppercase letter."
-    );
+  if (!/[0-9]/.test(value)) {
+    showError(password, passwordError, "Password must contain a number.");
 
     return false;
-}
+  }
 
-if (!/[0-9]/.test(value)) {
+  showSuccess(password, passwordError);
 
-    showError(
-        password,
-        passwordError,
-        "Password must contain a number."
-    );
-
-    return false;
-}
-
-showSuccess(password, passwordError);
-
-return true;
-
-
+  return true;
 }
 
 // =========================================================
@@ -206,37 +153,25 @@ return true;
 // =========================================================
 
 function validatePhone() {
-const value = phone.value.trim();
+  const value = phone.value.trim();
 
-const phonePattern =
-    /^[0-9+\-\s()]{7,20}$/;
+  const phonePattern = /^[0-9+\-\s()]{7,20}$/;
 
-if (value === "") {
-
-    showError(
-        phone,
-        phoneError,
-        "Phone number is required."
-    );
+  if (value === "") {
+    showError(phone, phoneError, "Phone number is required.");
 
     return false;
-}
+  }
 
-if (!phonePattern.test(value)) {
-
-    showError(
-        phone,
-        phoneError,
-        "Please enter a valid phone number."
-    );
+  if (!phonePattern.test(value)) {
+    showError(phone, phoneError, "Please enter a valid phone number.");
 
     return false;
-}
+  }
 
-showSuccess(phone, phoneError);
+  showSuccess(phone, phoneError);
 
-return true;
-
+  return true;
 }
 
 // =========================================================
@@ -244,35 +179,23 @@ return true;
 // =========================================================
 
 function validateAddress() {
-const value = address.value.trim();
+  const value = address.value.trim();
 
-if (value === "") {
-
-    showError(
-        address,
-        addressError,
-        "Address is required."
-    );
+  if (value === "") {
+    showError(address, addressError, "Address is required.");
 
     return false;
-}
+  }
 
-if (value.length < 5) {
-
-    showError(
-        address,
-        addressError,
-        "Please enter a valid address."
-    );
+  if (value.length < 5) {
+    showError(address, addressError, "Please enter a valid address.");
 
     return false;
-}
+  }
 
-showSuccess(address, addressError);
+  showSuccess(address, addressError);
 
-return true;
-
-
+  return true;
 }
 
 // =========================================================
@@ -290,29 +213,24 @@ address.addEventListener("input", validateAddress);
 // =========================================================
 
 signupForm.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-event.preventDefault();
+  const isUsernameValid = validateUsername();
+  const isEmailValid = validateEmail();
+  const isPasswordValid = validatePassword();
+  const isPhoneValid = validatePhone();
+  const isAddressValid = validateAddress();
 
-const isUsernameValid = validateUsername();
-const isEmailValid = validateEmail();
-const isPasswordValid = validatePassword();
-const isPhoneValid = validatePhone();
-const isAddressValid = validateAddress();
-
-
-if (
+  if (
     isUsernameValid &&
     isEmailValid &&
     isPasswordValid &&
     isPhoneValid &&
     isAddressValid
-) {
-
-    alert("Registration successful!");
+  ) {
+    // alert("Registration successful!");
 
     // Later you can send the data to your Node.js / Express backend.
-    // signupForm.submit();
-
-}
-
+    signupForm.submit();
+  }
 });

@@ -12,7 +12,6 @@ connectDB();
 
 //Meddelware
 app.use(methodOverride('_method'));
-// Body parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -40,10 +39,9 @@ app.get("/contact", (req , res)=>{
 app.get("/sigin", (req , res)=>{
     res.render("user/sigin");
 })
-app.get("/join", (req , res)=>{
-    res.render("user/join");
+app.get("/sigup", (req , res)=>{
+    res.render("user/signup");
 })
-
 
 const PORT= process.env.PORT || 8000;
 app.listen(PORT, ()=>{
